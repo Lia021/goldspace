@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>lia altspace aframe 360</title>
+  <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+  <script src="http://sdk.altvr.com/libs/altspace.js/0.28.1/altspace.min.js"></script>  
+  <script src="https://cdn.rawgit.com/AltspaceVR/aframe-altspace-component/v1.3.2/dist/aframe-altspace-component.min.js"></script>
+</head>
+
+<body>
+  <a-scene altspace=fullspace:true>
+  <a-assets></a-assets>  
+ <!--sky-->
+  <a-sky radius="500" src="http://i.imgur.com/GE5tMIn.jpg" segments-width="10" segments-height="6"></a-sky>
+  <!--ring-->
+  <a-ring color="white" radius-inner="1" radius-outer="2"position="-5 4 -12"side="double"rotation="-90 -90 0"></a-ring>
+  <a-ring color="white" radius-inner="1" radius-outer="2.40"position="5.50 4.4 -12"side="double"rotation="-90 -90 0"></a-ring>
+  <!--sphere-->
+  <a-sphere src="http://i.imgur.com/inawJcY.jpg" radius="1.25"position="-5 4 -12"><a-animation attribute="rotation" dur="100000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+  </a-sphere>
+  <a-sphere src="http://i.imgur.com/inawJcY.jpg" radius="1.30"position="5.50 4.5 -12.1"><a-animation attribute="rotation" dur="-100000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation>
+  </a-sphere>
+  <!--circle-->
+  <a-circle src="http://i.imgur.com/inawJcY.jpg" radius="3.1"position="-7.50 0.11 -12"rotation="-90 -90 0"altspace-cursor-collider="enabled: false"></a-circle>
+  <!--gold bouble-->
+  <a-sphere src="http://i.imgur.com/R2JdlAZ.jpg"  radius="0.44"position="5.96 0.13 -20.52"altspace-cursor-collider="enabled: false"><a-animation attribute="rotation" dur="15000" fill="forwards" to="360 0 0" repeat="indefinite" easing="linear"></a-animation></a-sphere>
+  <!--gold-->
+  <a-image src="http://i.imgur.com/SIUPeLD.png"position="-1 1 -11"hight="1"width="1"><a-animation attribute="rotation" dur="15000" fill="forwards" to="360 0 0" repeat="indefinite" easing="linear"></a-animation>
+  </a-image>
+  <!--cylinder-->
+  <a-cylinder color="#D4AF37" height="0.95" radius="0.5"position="-2.1 0.30 -16"></a-cylinder>
+  <a-cylinder color="#D4AF37" height="0.95" radius="0.5"position="-3.50 0.30 -16.2"></a-cylinder> 
+  <a-cylinder color="#D4AF37" height="0.95" radius="0.5"position="-1.1 0.30 -16.3"></a-cylinder>
+  <!--image-->
+   <a-box src="http://i.imgur.com/QugcWx2.jpg"position="3 1 -20.93"depth="1.50" height="3.80" width="0.1"rotation="0 90 0"></a-box>
+   <a-box src="http://i.imgur.com/QugcWx2.jpg"position="9 1 -19.50"depth="2.50" height="6" width="0.1"rotation="0 0 0"></a-box>
+   <!--chicken-->
+   <a-image src="http://i.imgur.com/9HKqL9c.png"height="0.60" width="0.60"position="-10 0.66 -12"rotation="0 90 0"><a-animation attribute="rotation" dur="15000" fill="forwards" to="360 90 0" repeat="indefinite" easing="linear"></a-animation>
+   </a-image>
+   <!--box-->
+   <a-box src="http://i.imgur.com/R2JdlAZ.jpg"depth="0.60"height="0.50"width="0.65"position="-2.50 0.45 -20.30"altspace-cursor-collider="enabled: false"></a-box> 
+   <!--lights-->
+   <a-sphere src="http://i.imgur.com/inawJcY.jpg" radius="0.52"position="1 2.80 -1.65"><a-animation attribute="rotation" dur="15000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-sphere>
+   <a-sphere src="http://i.imgur.com/inawJcY.jpg" radius="0.52"position="-3 2.80 -1.65"><a-animation attribute="rotation" dur="15000" fill="forwards" to="0 -360 0" repeat="indefinite" easing="linear"></a-animation></a-sphere>  
+ </a-scene>
+  
+
+</body>
+</html>
