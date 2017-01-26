@@ -27,13 +27,10 @@
   <a-circle src="http://i.imgur.com/inawJcY.jpg" radius="3.1"position="-7.50 0.11 -12"rotation="-90 -90 0"altspace-cursor-collider="enabled: false"></a-circle>
   <!--gold bouble-->
   <a-sphere src="http://i.imgur.com/R2JdlAZ.jpg"  radius="0.44"position="5.96 0.13 -20.52"altspace-cursor-collider="enabled: false"><a-animation attribute="rotation" dur="15000" fill="forwards" to="360 0 0" repeat="indefinite" easing="linear"></a-animation></a-sphere>
-  <!--gold-->
-  <a-image src="http://i.imgur.com/SIUPeLD.png"position="-1 1 -11"hight="1"width="1"><a-animation attribute="rotation" dur="15000" fill="forwards" to="360 0 0" repeat="indefinite" easing="linear"></a-animation>
-  </a-image>
   <!--cylinder-->
-  <a-cylinder color="#D4AF37" height="0.95" radius="0.5"position="-2.1 0.30 -16"></a-cylinder>
-  <a-cylinder color="#D4AF37" height="0.95" radius="0.5"position="-3.50 0.30 -16.2"></a-cylinder> 
-  <a-cylinder color="#D4AF37" height="0.95" radius="0.5"position="-1.1 0.30 -16.3"></a-cylinder>
+  <a-cylinder color="#D4AF37" height="0.95" radius="0.5"position="-2.1 0.30 -16"n-mesh-collider="enabled: true; type: environment"></a-cylinder>
+  <a-cylinder color="#D4AF37" height="0.95" radius="0.5"position="-3.50 0.30 -16.2"n-mesh-collider="enabled: true; type: environment"></a-cylinder> 
+  <a-cylinder color="#D4AF37" height="0.95" radius="0.5"position="-1.1 0.30 -16.3"n-mesh-collider="enabled: true; type: environment"></a-cylinder>
   <!--image-->
    <a-box src="http://i.imgur.com/QugcWx2.jpg"position="3 1 -20.93"depth="1.50" height="3.80" width="0.1"rotation="0 90 0"></a-box>
    <a-box src="http://i.imgur.com/QugcWx2.jpg"position="9 1 -19.50"depth="2.50" height="6" width="0.1"rotation="0 0 0"></a-box>
@@ -44,9 +41,19 @@
    <a-box src="http://i.imgur.com/R2JdlAZ.jpg"depth="0.60"height="0.50"width="0.65"position="-2.50 0.45 -20.30"altspace-cursor-collider="enabled: false"></a-box> 
    <!--lights-->
    <a-sphere src="http://i.imgur.com/inawJcY.jpg" radius="0.52"position="1 2.80 -1.65"><a-animation attribute="rotation" dur="15000" fill="forwards" to="0 360 0" repeat="indefinite" easing="linear"></a-animation></a-sphere>
-   <a-sphere src="http://i.imgur.com/inawJcY.jpg" radius="0.52"position="-3 2.80 -1.65"><a-animation attribute="rotation" dur="15000" fill="forwards" to="0 -360 0" repeat="indefinite" easing="linear"></a-animation></a-sphere>  
+   <a-sphere src="http://i.imgur.com/inawJcY.jpg" radius="0.52"position="-3 2.80 -1.65"><a-animation attribute="rotation" dur="15000" fill="forwards" to="0 -360 0" repeat="indefinite" easing="linear"></a-animation></a-sphere>
+      <!--model-->
+    <a-assets>
+      <a-asset-item id="base" src="https://rawgit.com/Lia021/goldspace/master/tavern.dae"></a-asset-item>
+    </a-assets>
+      <a-entity position="-0.55 -0.50 -11" rotation="0 90 0"n-mesh-collider="enabled: true; type: environment"collada-model="#base"></a-entity>
+    </a-entity>
+   <!--model2-->
+    <a-assets>
+      <a-asset-item id="pig" src="https://rawgit.com/Lia021/goldspace/master/gold%20pig%202.dae"></a-asset-item>
+    </a-assets>
+      <a-entity position="-1 1.70 -11.30" rotation="0 0 0"collada-model="#pig"><a-animation attribute="rotation" dur="15000" fill="spot" to="360 0 0" repeat="indefinite" easing="linear"></a-animation></a-entity>
+    </a-entity>
  </a-scene>
-  
-
-</body>
+  </body>
 </html>
